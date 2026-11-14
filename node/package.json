@@ -1,0 +1,56 @@
+{
+  "name": "outrun-ai",
+  "version": "0.1.0",
+  "description": "Node/TypeScript client for the Outrun API (OpenAI-compatible), built on the official OpenAI SDK.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"test/*.test.js\"",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "outrun",
+    "llm",
+    "api",
+    "openai-compatible",
+    "sdk",
+    "gpt",
+    "claude",
+    "gemini",
+    "deepseek"
+  ],
+  "license": "MIT",
+  "author": "Outrun LLC <support@outrun.to>",
+  "homepage": "https://outrun.to",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OutrunAIAPI/outrun-sdk.git",
+    "directory": "node"
+  },
+  "bugs": {
+    "url": "https://github.com/OutrunAIAPI/outrun-sdk/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "openai": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}

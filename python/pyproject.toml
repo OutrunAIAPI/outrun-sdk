@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "outrun-ai"
+version = "0.1.0"
+description = "Python client for the Outrun API (OpenAI-compatible), built on the official OpenAI SDK."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Outrun LLC", email = "support@outrun.to" }]
+keywords = ["outrun", "llm", "api", "openai-compatible", "sdk", "gpt", "claude", "gemini", "deepseek"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Typing :: Typed",
+]
+dependencies = ["openai>=1.55.3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[project.urls]
+Homepage = "https://outrun.to"
+Documentation = "https://outrun.to/docs/"
+Pricing = "https://outrun.to/pricing"
+Repository = "https://github.com/OutrunAIAPI/outrun-sdk"
+Issues = "https://github.com/OutrunAIAPI/outrun-sdk/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/outrun_ai"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/outrun_ai", "tests", "README.md", "LICENSE", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
