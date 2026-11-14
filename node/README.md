@@ -1,6 +1,6 @@
 # outrun-ai (Node / TypeScript)
 
-Node client for the [Outrun API](https://outrun.to). Outrun is a prepaid, OpenAI-compatible API: one key for GPT, Claude, Gemini, Grok, DeepSeek, GLM, Kimi, Qwen and MiniMax models. This package is a thin wrapper over the official `openai` npm package with the base URL and API key set for you, so everything the OpenAI SDK does still works. ESM, with TypeScript types. Node 18 or newer.
+Node client for the [Outrun API](https://outrun.to). Outrun is a prepaid, OpenAI-compatible API: one key for GPT, Claude, Gemini, Grok, DeepSeek, GLM, Kimi, Qwen and MiniMax models. This package is a thin wrapper over the official `openai` npm package with the base URL and API key set for you, so everything the OpenAI SDK does still works. ESM, with TypeScript types. Node 20 or newer.
 
 ## Install
 
